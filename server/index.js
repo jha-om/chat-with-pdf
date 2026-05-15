@@ -53,7 +53,7 @@ app.post('/upload/pdf', upload.single('pdf'), async (req, res) => {
 });
 
 app.get('/chat', async (req, res) => {
-    const query = "what is Byzantine?";
+    const query = req.query.message;
 
     const embeddings = new OllamaEmbeddings({
         baseUrl: "http://localhost:11434",
@@ -74,7 +74,11 @@ app.get('/chat', async (req, res) => {
 
             Use the context as the primary source of truth. Be accurate, concise, and do not make up information.
             If relevant, combine multiple parts of the context to form a complete answer.
-            Always prioritize correctness over completeness.
+            Always prioritize correctness over completeness, but make sure the answer to be complete.
+
+            Also give clean output, don't use any sort of latex in the response. Just a clean, proper and enriched response.
+
+            If there are multiple questions asked then answer it in the separate paragraph but maintaining the flow of the answer so that it doesn't differ between those questions
             
             Context: ${JSON.stringify(result)}
         `;
