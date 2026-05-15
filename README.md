@@ -4,6 +4,9 @@
 
 Lightweight demo app demonstrating a Next.js client and a simple Node.js server with a background worker and file uploads. Intended as a small full-stack example for local development and experimentation.
 
+## Demo
+https://github.com/user-attachments/assets/a8c35bf2-4fe5-4445-a9f5-722a17731fc7
+
 ## Quick start
 
 - Start services (uses docker-compose where available):
