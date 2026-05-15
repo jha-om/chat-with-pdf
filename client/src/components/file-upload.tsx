@@ -27,8 +27,8 @@ export default function FileUpload() {
     }
 
     return (
-        <div className="w-full h-full bg-slate-700/20 p-4 flex justify-center items-center rounded-2xl">
-            <div onClick={handleFileUpload} className="flex flex-col items-center justify-center border border-dashed p-8 rounded-xs border-zinc-600/80 cursor-pointer">
+        <div className="flex h-full min-h-80 w-full items-center justify-center bg-slate-700/20 p-4">
+            <div onClick={handleFileUpload} className="flex cursor-pointer flex-col items-center justify-center border border-dashed border-zinc-600/80 p-8 text-center">
                 <Upload width={72} height={72} color="oklch(44.2% 0.017 285.786)" />
                 <div>
                     <h3>Upload any PDF to chat with it</h3>

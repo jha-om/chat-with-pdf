@@ -29,7 +29,7 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen overflow-hidden flex flex-col">
+      <body className="flex h-screen min-h-0 flex-col overflow-hidden">
         <ClerkProvider>
           <Appbar />
           {children}
